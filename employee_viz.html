@@ -1,6 +1,7 @@
 
 <html>
 <body>
+
 <h2>Employee Data Visualization</h2>
 <p>Email: 23f3004065@ds.study.iitm.ac.in</p>
 
@@ -8,26 +9,23 @@
 <p>18</p>
 
 <h3>Python Code Used</h3>
-<pre><code>
-
+<pre>
+```python
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Create a dataset where Finance appears 18 times
 departments = ["Finance"] * 18 + ["HR"] * 20 + ["Marketing"] * 20 + ["R&D"] * 21 + ["Operations"] * 21
 employee_id = [f"EMP{i:03d}" for i in range(1, 101)]
 df = pd.DataFrame({"employee_id": employee_id, "department": departments})
 
-# Calculate Finance count
 finance_count = (df["department"] == "Finance").sum()
 print("Finance Department Count:", finance_count)
 
-# Create histogram
 plt.figure()
 df["department"].hist()
 plt.show()
-
-</code></pre>
+```
+</pre>
 
 <h3>Histogram</h3>
 <img src="department_hist.png" alt="Histogram">
